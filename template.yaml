@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: AWS SAM Template for GreetMe API
+
+Globals:
+  Function:
+    Timeout: 10
+    MemorySize: 128
+  Api:
+    Cors:
+      AllowMethods: "'GET,POST,OPTIONS'"
+      AllowHeaders: "'Content-Type'"
+      AllowOrigin: "'*'"
+
+Resources:
+  GreetMeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: greet-me/
+      Handler: app.lambdaHandler
+      Runtime: nodejs22.x
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Events:
+        GetGreetAPI:
+          Type: Api
+          Properties:
+            Path: /greet/{name}
+            Method: get
+            RequestParameters:
+              - method.request.querystring.lang
+        PostGreetAPI:
+          Type: Api
+          Properties:
+            Path: /greet
+            Method: post
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: es2020
+        EntryPoints:
+          - app.mjs
+
+Outputs:
+  GreetMeApi:
+    Description: "API Gateway endpoint URL for GreetMe API"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/greet/"
+  GreetMeFunctionArn:
+    Description: "ARN of the GreetMe Lambda Function"
+    Value: !GetAtt GreetMeFunction.Arn

@@ -1,0 +1,15 @@
+{
+  "resource": "/{proxy+}",
+  "path": "/path/to/resource",
+  "httpMethod": "GET",
+  "isBase64Encoded": false,
+  "queryStringParameters": {
+    "lang": "fr"
+  },
+  "pathParameters": {
+    "name": "Riyaz"
+  },
+  "stageVariables": {
+    "baz": "qux"
+  }
+}
