@@ -2,7 +2,7 @@
 
 # 👋 GreetMe API - AWS SAM
 
-<img src="https://d1.awsstatic.com/serverless/SAM/sam-squirrel.e591b8a8b4ef885e97843a7b3fe30c4efbc903d7.png" alt="AWS SAM" width="400"/>
+<img src="https://compote.slate.com/images/2119ff95-86f2-4546-a8fd-7b70ec58c9c6.jpeg?crop=1560%2C1040%2Cx0%2Cy0&width=370" alt="AWS Serverless" width="600"/>
 
 ### API REST serverless multiidioma construida con **AWS SAM** que implementa saludos personalizados utilizando **API Gateway**, **AWS Lambda**, y **Node.js 22.x** con optimización **esbuild**.
 
