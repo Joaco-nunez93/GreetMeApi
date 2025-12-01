@@ -18,7 +18,7 @@
 
 ## 📋 Overview
 
-Este repositorio contiene un proyecto educativo que demuestra cómo construir una **API REST serverless** en AWS utilizando **AWS SAM (Serverless Application Model)**. El proyecto implementa dos endpoints que devuelven saludos personalizados en múltiples idiomas (inglés, español, francés, hindi), demostrando patrones de integración entre API Gateway y Lambda con validación de datos, manejo de errores, y optimización de bundle.
+Este repositorio contiene un proyecto en el caul se construye una **API REST serverless** en AWS utilizando **AWS SAM (Serverless Application Model)**. El proyecto implementa dos endpoints que devuelven saludos personalizados en múltiples idiomas (inglés, español, francés, hindi), demostrando patrones de integración entre API Gateway y Lambda con validación de datos, manejo de errores, y optimización de bundle.
 
 **Flujo de trabajo:**
 1. Cliente hace una petición GET o POST al endpoint `/greet`
